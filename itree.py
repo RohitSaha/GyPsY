@@ -1,11 +1,14 @@
 #mapping moods and other factors to themes using identification trees by calculating disorder and quality of a test
 
 import math
+#mapping moods and other factors to themes using identification trees by calculating disorder and quality of a test
+
+import math
 
 #sample data
 titles=['age','gender','mood','themes']
 data=[['forty','male','happy','activity'],
-	  ['fifty','female','happy','food'],
+	  ['forty','female','happy','food'],
 	  ['thirty','male','sad','food']]
 
 #removes themes from titles
@@ -132,41 +135,46 @@ def used_feat(header,best):
 	header_new=[]
 	for each in header:
 		if each!=best:
-			header.append(each)
+			header_new.append(each)
+	return header_new
 			
 
 #creates itree	
 def create_itree(given_data,titles):
 	header=only_feat(titles)
+	
+
 	best=choose_feat(header,given_data)
+	
 	new_title=used_feat(titles,best)
+	
 	new_header=used_feat(header,best)
+	
 	new_data=remove_used_feat(best,given_data)
 	
+	
+	
 	tree={best:{}}
+
 	
 	for val in unique_val(best,given_data):
 		data_mod=modify_data(best,val,new_data)
 		total_themes=feat_entries("themes",data_mod)
-		
+		print(val)
 		if ((len(new_header))<=0):
 			var=default("themes",given_data)
 			tree[best][val]=var
+			break
 			
 		elif((total_themes.count(total_themes[0])==len(total_themes))):
-			tree[best][val]=total_themes[0]
-			 
+			tree[best][val]=total_themes[0] 
+			break
+
 		else:
 			tree[best][val]=create_itree(data_mod,new_title)
 			
 	return tree
-		
-	
-#printed functions to make sure they were working properly
-print index("themes")		
-print feat_entries("themes",data)
-print unique_val("themes",data)	
-print default("themes",data)
-print quality(data,"age")
-print choose_feat(titles,data)
+
+
+print create_itree(data,titles)
 
