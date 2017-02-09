@@ -1,6 +1,6 @@
 from api import *
 import math
-log2 = lambda x: math.log(x, 8)
+log2 = lambda x: math.log(x, 2)
 INF = float('inf')
 
 
