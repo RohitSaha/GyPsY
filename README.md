@@ -1,12 +1,17 @@
 # GyPsY
-Using Identification trees to recommend activity to people based on certain parameters.
+Using Identification trees to recommend activity(Themes) to people based on certain classifiers : 
  
-Parameters are as follows :
+Possible classifiers : 
 <ul>
-<li> Activity
+<li> Age
 <li> Gender
 <li> Moods
 <li> Timestamp
 <li> Weather
 <li> Solo/Group
+</ul>
+
+Target classifier :
+<ul>
+<li> Themes
 </ul>
