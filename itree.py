@@ -1,9 +1,6 @@
 #mapping moods and other factors to themes using identification trees by calculating disorder and quality of a test
 
 import math
-#mapping moods and other factors to themes using identification trees by calculating disorder and quality of a test
-
-import math
 
 #sample data
 titles=['age','gender','mood','themes']
@@ -142,8 +139,6 @@ def used_feat(header,best):
 #creates itree	
 def create_itree(given_data,titles):
 	header=only_feat(titles)
-	
-
 	best=choose_feat(header,given_data)
 	
 	new_title=used_feat(titles,best)
