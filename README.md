@@ -18,15 +18,18 @@ Target classifier :
 
 For running the project,
 Key files required are :
-> data_places.csv - Contains data for mapping to places
-> data_train.csv - Contains data required for training Identification tree
-> EmotionAPIIntegration.py - Use of Microsoft Cognitive services in order to capture emotion from image
-> generate_places_from_themes.py - Code required to map themes to places
-> updated_id_tree.py - Core Identification tree program
-> Gypsy.py - Main file required to run the program
+<ol>
+<li> data_places.csv - Contains data for mapping to places
+<li> data_train.csv - Contains data required for training Identification tree
+<li> EmotionAPIIntegration.py - Use of Microsoft Cognitive services in order to capture emotion from image
+<li> generate_places_from_themes.py - Code required to map themes to places
+<li> updated_id_tree.py - Core Identification tree program
+<li> Gypsy.py - Main file required to run the program
+</ol>
 
 Contributors :
-Rohit Saha
-Aparna Krishnakumar
-Sourav Sharan
-Sree Harsha Nelaturu
+<ul>
+<li>Rohit Saha
+<li>Aparna Krishnakumar
+<li>Sourav Sharan
+<li>Sree Harsha Nelaturu
