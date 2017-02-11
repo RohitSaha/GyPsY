@@ -5,9 +5,6 @@ with open('data_places.csv', 'rb') as f:
     reader = csv.reader(f)
     data = list(reader)
 
-print(data)
-result = raw_input("Enter theme: ")
-
 def get_place(result):
     
     if result == "Activity":
@@ -34,5 +31,3 @@ def get_place(result):
     for i in range(0,3):
         a.append(data[index][n[i]])
     return a
-
-print(get_place(result))
