@@ -34,7 +34,7 @@ Contributors :
 <li>Aparna Krishnakumar
 <li>Sourav Sharan
 <li>Sree Harsha Nelaturu
-
+</ul>
 Sample:
 [INPUT]
 <ul>
