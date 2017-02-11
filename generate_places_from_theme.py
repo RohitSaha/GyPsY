@@ -25,7 +25,6 @@ def get_place(result):
         index = 8
 
     l = (len(data[index]))
-    print(l)
     n = sample(range(1, l), 3)
     a = []
     for i in range(0,3):
