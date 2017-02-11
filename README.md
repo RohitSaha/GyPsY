@@ -38,18 +38,18 @@ Contributors :
 Sample:
 [INPUT]
 <ul>
-Emotion : "Neutral"
-What is your age?18
-What is your gender (Male/Female)?Male
-Would you prefer an Outdoor or Indoor? Outdoor
-Would you like to go out in the Early Morning, Morning, Afternoon or Evening? Afternoon
-Would you prefer to go Solo or in a Group?Group
+<li>Emotion : "Neutral"
+<li>What is your age?18
+<li>What is your gender (Male/Female)?Male
+<li>Would you prefer an Outdoor or Indoor? Outdoor
+<li>Would you like to go out in the Early Morning, Morning, Afternoon or Evening? Afternoon
+<li>Would you prefer to go Solo or in a Group?Group
 </ul>
 
 [OUTPUT]
 <ul>
-You should try to do one of the following:
-Observe crocodiles at the Crocodile Bank
-Go have a picnic at Thollakapiar Poonga, Mandavelipakkam
-Cycle and View the animals and beautiful greenery at Vandalur Zoo
+<li>You should try to do one of the following:
+<li>Observe crocodiles at the Crocodile Bank
+<li>Go have a picnic at Thollakapiar Poonga, Mandavelipakkam
+<li>Cycle and View the animals and beautiful greenery at Vandalur Zoo
 </ul>
