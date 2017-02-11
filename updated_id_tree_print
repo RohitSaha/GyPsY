@@ -10,7 +10,6 @@ WEATHER
                         Solo: Entertainment
                 Male: Entertainment
             18-24: MOODS
-                Happiness: Entertainment
                 anger: GENDER
                     Female: SOLO/GROUP
                         Group: Shopping
@@ -31,7 +30,7 @@ WEATHER
                     Male: SOLO/GROUP
                         Group:Shopping
                         Solo: Views
-            25-24: Entertainment
+            
             25-34: MOODS
                 anger: SOLO/GROUP
                     Group: Entertainment
