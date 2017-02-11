@@ -6,7 +6,7 @@ age = raw_input("What is your age?")
 gender = raw_input("What is your gender (Male/Female)?")
 weather = raw_input("Would you prefer an Outdoor or Indoor? ")
 time = raw_input("Would you like to go out in the Early Morning, Morning, Afternoon or Evening? ")
-num = raw_input("Would you prefer to go Solo or in a Group?")
+num = raw_input("Would you prefer to go  or in a Group?")
 
 if weather=="Indoor":    
 	if time=="Afternoon":            
@@ -304,7 +304,7 @@ else:
 
 places = get_place(result)
 
-print "You should try to do one of the following:"
+print "Why dont you do one of the following:"
 for i in places:
         print(i)
         
