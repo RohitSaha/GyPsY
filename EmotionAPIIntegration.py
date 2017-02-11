@@ -116,4 +116,4 @@ def get_emotion():
         return emotion
         #return data8uint
 
-print(get_emotion())
+
