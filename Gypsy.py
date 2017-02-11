@@ -4,7 +4,7 @@ from generate_places_from_theme import get_place
 moods = get_emotion()
 age = raw_input("What is your age?")
 gender = raw_input("What is your gender (Male/Female)?")
-weather = raw_input("Would you prefer an outdoor or indoor? ")
+weather = raw_input("Would you prefer an Outdoor or Indoor? ")
 time = raw_input("Would you like to go out in the Early Morning, Morning, Afternoon or Evening? ")
 num = raw_input("Would you prefer to go Solo or in a Group?")
 
@@ -306,5 +306,5 @@ places = get_place(result)
 
 print "You should try to do one of the following:"
 for i in places:
-        print(places[i])
+        print(i)
         
