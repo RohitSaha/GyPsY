@@ -4,7 +4,6 @@ WEATHER
         Afternoon: AGE 
             12-17: GENDER
                 Female: MOODS
-                    neutral: None
                     sadness: SOLO/GROUP
                         Group: Food
                         Solo: Shopping
@@ -13,25 +12,20 @@ WEATHER
                 Happiness: Entertainment
                 anger: GENDER
                     Female: SOLO/GROUP
-                        Group: None
+                        Group: Food
                         Solo: Entertainment
-                    Male: None
-                happiness: GENDER
-                    Female: None
-                    Male: SOLO/GROUP
-                        Group: None
-                        Solo: None
+                    Male: Activity
                 neutral: SOLO/GROUP
                     Group: Shopping
                     Solo: Entertainment
                 sadness: GENDER
                     Female: SOLO/GROUP
-                        Group: None
-                        Solo: None
+                        Group: City feels
+                        Solo: Shopping
                     Male: SOLO/GROUP
-                        Group: None
-                        Solo: None
-            25-24: Entertainment
+                        Group: Activity
+                        Solo: Entertainment
+           
             25-34: MOODS
                 anger: SOLO/GROUP
                     Group: Entertainment
@@ -57,12 +51,12 @@ WEATHER
             45-54: MOODS
                 anger: SOLO/GROUP
                     Group: Religious
-                    Solo: None
+                    Solo: Food
                 happiness: Food
                 neutral: Entertainment
                 sadness: GENDER
                     Female: Religious
-                    Male: None
+                    Male: Entertainment
             55-64: MOODS
                 anger: Religious
                 happiness: Food
@@ -74,7 +68,7 @@ WEATHER
             neutral: Religious
             sadness: AGE 
                 18-24: GENDER
-                    Female: None
+                    Female: Views
                     Male: Religious
                 25-34: Food
         Evening: AGE 
@@ -82,7 +76,7 @@ WEATHER
                 anger: SOLO/GROUP
                     Group: GENDER
                         Female: Food
-                        Male: None
+                        Male: Activity
                     Solo: GENDER
                         Female: Food
                         Male: Entertainment
@@ -91,33 +85,33 @@ WEATHER
                     Male: Entertainment
                 neutral: GENDER
                     Female: Food
-                    Male: None
+                    Male: Entertainment
                 sadness: GENDER
                     Female: Food 
                     Male: Food
             18-24: MOODS
                 anger: SOLO/GROUP
-                    Group: None
+                    Group: Views
                     Solo: GENDER
                         Female: Entertainment
-                        Male: None
+                        Male: Religious
                 happiness: SOLO/GROUP
                     Group: GENDER
                         Female: Food
-                        Male: None
+                        Male: Activity
                     Solo: GENDER
-                        Female: None
-                        Male: None
+                        Female: Shopping
+                        Male: Entertainment
                 neutral: SOLO/GROUP
                     Group: GENDER
-                        Female: None
-                        Male: None
+                        Female: Shopping
+                        Male: Activity
                     Solo: GENDER
-                        Female: None
+                        Female: Views
                         Male: Entertainment
                 sadness: SOLO/GROUP
                     Group: Entertainment
-                    Solo: None
+                    Solo: Nature
             25-34: MOODS
                 anger: Food
                 neutral: SOLO/GROUP
@@ -177,7 +171,7 @@ WEATHER
                     Group: Activity
                     Solo: GENDER
                         Female: Nature
-                        Male: None
+                        Male: Entertainment
                 happiness: GENDER
                     Female: City Feels
                     Male: Activity
@@ -188,13 +182,13 @@ WEATHER
                         Solo: Activity
                 sadness: GENDER
                     Female: SOLO/GROUP
-                        Group: None
-                        Solo: Activity
+                        Group: Activity
+                        Solo: City Feels
                     Male: Activity
             25-34: MOODS
                 anger: Activity
                 happiness: City Feels
-                sadness: None
+                sadness: Nature
             25-34 : Nature
             35-44: MOODS
                 anger: Nature
@@ -221,7 +215,7 @@ WEATHER
                     Male: SOLO/GROUP
                         Group: Views
                         Solo: Nature
-            sadness: None
+            sadness:City Feels
         Evening: AGE 
             12-17: GENDER
                 Female: Views
@@ -258,11 +252,11 @@ WEATHER
                 12-17: City Feels
                 18-24: GENDER
                     Female: City Feels
-                    Male: None
+                    Male: Activity
                 25-34: Activity
             neutral: SOLO/GROUP
                 Group: Nature
-                Solo: None
+                Solo: City feels
             sadness: Views
         Night: GENDER
             Female: Views
