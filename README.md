@@ -30,7 +30,7 @@ Once these resources are compiled, run Gypsy.py to access the program.
 
 Contributors :
 <ul>
-<li>Rohit Saha
+<li>[Rohit Saha](https://github.com/RohitSaha)
 <li>Aparna Krishnakumar
 <li>Sourav Sharan
 <li>Sree Harsha Nelaturu
