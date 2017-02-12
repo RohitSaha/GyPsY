@@ -1,6 +1,9 @@
 # GyPsY
+
+Contributers : [Rohit Saha](https://github.com/RohitSaha), [Aparna Krishnakumar](https://github.com/Aparnaakk), [Sourav Sharan](https://github.com/SouravSharan), [Sree Harsha Nelaturu](https://github.com/TheBigFundamental)
+
 Using Identification trees to recommend activity(Themes) to people based on certain classifiers : 
- 
+
 Possible classifiers : 
 <ul>
 <li> Age
@@ -28,13 +31,6 @@ Key files required are :
 </ol>
 Once these resources are compiled, run Gypsy.py to access the program.
 
-Contributors :
-<ul>
-<li>[Rohit Saha](https://github.com/RohitSaha)
-<li>Aparna Krishnakumar
-<li>Sourav Sharan
-<li>Sree Harsha Nelaturu
-</ul>
 Sample:
 [INPUT]
 <ul>
