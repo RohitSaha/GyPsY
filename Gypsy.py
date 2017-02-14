@@ -54,22 +54,22 @@ if weather=="Indoor":
 					result = "Religious"
 			if moods=="happiness":
 				result = "Food"
-			if mood=="neutral":
+			if moods=="neutral":
 				if gender=="Female":
 					result = "Shopping"
 			else:
 				result = "Entertainment"
 
 		elif age in range(45, 55):
-			if mood=="happiness":
+			if moods=="happiness":
 				result = "Food"
-			elif mood=="neutral":
+			elif moods=="neutral":
 				result = "Entertainment"
 			else:
 				result = "Religious"
 
 		elif age in range(55, 65):
-			if mood=="anger":
+			if moods=="anger":
 				result = "Religious"
 			else:
 				result = "Food"
@@ -141,9 +141,9 @@ if weather=="Indoor":
 				result = "Religious"
 	elif time=="Morning":
 		if age in range(12, 18):
-			if mood=="neutral":
+			if moods=="neutral":
 				result = "Religious"
-			if mood=="sadness":
+			if moods=="sadness":
 				if gender=="Male":
 					result = "Religious"
 			else:
