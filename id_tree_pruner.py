@@ -44,22 +44,22 @@ if weather=="Indoor":
 					print "Religious"
 			if moods=="happiness":
 				print "Food"
-			if mood=="neutral":
+			if moods=="neutral":
 				if gender=="Female":
 					print "Shopping"
 			else:
 				print "Entertainment"
 
 		elif age=="45-54":
-			if mood=="happiness":
+			if moods=="happiness":
 				print "Food"
-			elif mood=="neutral":
+			elif moods=="neutral":
 				print "Entertainment"
 			else:
 				print "Religious"
 
 		elif age=="55-64":
-			if mood=="anger":
+			if moods=="anger":
 				print "Religious"
 			else:
 				print "Food"
@@ -131,9 +131,9 @@ if weather=="Indoor":
 				print "Religious"
 	elif time=="Morning":
 		if age=="12-17":
-			if mood=="neutral":
+			if moods=="neutral":
 				print "Religious"
-			if mood=="sadness":
+			if moods=="sadness":
 				if gender=="Male":
 					print "Religious"
 			else:
