@@ -1,77 +1,62 @@
-#mapping moods and other factors to themes using identification trees by calculating disorder and quality of a test
+"""
+mapping moods and other factors to themes using identification trees by calculating disorder and quality of a test.
+Tests include age, gender,mood,weather, timestamp, etc
+"""
 
 import math
 
 #sample data
 titles=['age','gender','mood','themes']
 data=[['forty','male','happy','activity'],
-	  ['forty','female','happy','food'],
-	  ['thirty','male','sad','food']]
+      ['forty','female','happy','food'],
+      ['thirty','male','sad','food']]
 
-#removes themes from titles
 def only_feat(titles):
 	of=[]
 	for each in titles:
 		if each!="themes":
 			of.append(each)
 	return of
-	
-#calculates the index of a given feature
-def index(input):
+
+def index(input,titles):
 	output=0
 	for each in titles:
 		if input==each:
 			output=titles.index(each)
 	return output
 
-#returns a list of all the values under a given feature/theme
-def feat_entries(feat,given_data):
+def feat_entries(feat,given_data,titles):
 	val=[]
-	i=index(feat)
-	for row in data:
+	i=index(feat,titles)
+	for row in given_data:
 		val.append(row[i])
 	return val
 
-#returns a list of UNIQUE values under a given feature/theme
-def unique_val(feat,given_data):
+def unique_val(feat,given_data,titles):
 	unique=[]
-	entries=feat_entries(feat,given_data)
+	entries=feat_entries(feat,given_data,titles)
 	for each in entries:
 		if unique.count(each)==0:
 			unique.append(each)
 	return unique
 
-#returns the most frequent value under themes
-def default(feat,given_data):
-	default=[]
-	theme_total=feat_entries(feat,given_data)
-	uniq_th=unique_val(feat,given_data)
-	for each in uniq_th:
-		v=theme_total.count(each)
-		default.append(v)
-	i=max(default)
-	x=default.index(i)
-	return uniq_th[x]
 
-#returns a list of only the data that contains the required value of a feature
-def modify_data(feat,value,given_data):
+def modify_data(feat,value,given_data,titles):
 	data_mod=[]
-	ind=index(feat)
+	ind=index(feat,titles)
 	for row in given_data:
 		if (row[ind]==value):
-			data_mod.append(row)
+			data_mod.append(row)				
 	return data_mod
 
-
-#finds the quality?disorder of a given feature/test	
-def quality(given_data,feat):	
-	values=unique_val(feat,given_data)
+def quality(given_data,feat,titles):	
+	values=unique_val(feat,given_data,titles)
 	quality=0.0
-	m=len(data)
+	m=len(given_data)
 	dis=0.0
 	for each in values:
 		data_mod=[]
-		ind=index(feat)
+		ind=index(feat,titles)
 		for row in given_data:
 			if (row[ind]==each):
 				data_mod.append(row)
@@ -104,72 +89,44 @@ def quality(given_data,feat):
 		
 	return dis
 
-#choose feature with least disorder    
 def choose_feat(titles,given_data):
 	feat=None
 	temp=[]
 	for each in titles:
-		var=quality(given_data,each)
+		var=quality(given_data,each,titles)
 		temp.append(var)
 	min_disorder=min(temp)
 	feat=titles[temp.index(min_disorder)]
 	return feat
 
-def remove_used_feat(feat,given_data):
-	i=index(feat)
-	new_data=[]
-
-	for row in given_data:
-		temp=[]
-		for j in range(len(row)):
-			if row[j]!=row[i]:
-				temp.append(row[j])
-		new_data.append(temp)
-	
-	return new_data
-
-def used_feat(header,best):
-	header_new=[]
-	for each in header:
-		if each!=best:
-			header_new.append(each)
-	return header_new
-			
-
-#creates itree	
 def create_itree(given_data,titles):
 	header=only_feat(titles)
+	
+
 	best=choose_feat(header,given_data)
-	
-	new_title=used_feat(titles,best)
-	
-	new_header=used_feat(header,best)
-	
-	new_data=remove_used_feat(best,given_data)
-	
 	
 	
 	tree={best:{}}
 
 	
-	for val in unique_val(best,given_data):
-		data_mod=modify_data(best,val,new_data)
-		total_themes=feat_entries("themes",data_mod)
-		print(val)
-		if ((len(new_header))<=0):
-			var=default("themes",given_data)
-			tree[best][val]=var
-			break
+	for val in unique_val(best,given_data,titles):
+		
+		data_mod=modify_data(best,val,given_data,titles)
+		
+		total_themes=feat_entries("themes",data_mod,titles)
+		
+		if((total_themes.count(total_themes[0])==len(total_themes))):
 			
-		elif((total_themes.count(total_themes[0])==len(total_themes))):
-			tree[best][val]=total_themes[0] 
-			break
+            		tree[best][val]=total_themes[0]
+			
 
 		else:
-			tree[best][val]=create_itree(data_mod,new_title)
+			subtree=create_itree(data_mod,titles)
+
+			tree[best][val]=subtree
+
+		
 			
 	return tree
 
-
-print create_itree(data,titles)
-
+print (create_itree(data,titles))
